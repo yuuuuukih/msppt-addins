@@ -14,10 +14,13 @@
 3. 「プロジェクト」ウィンドウで右クリックし、メニューから「ファイルのエクスポート」を選択して.basファイルで書き出す。
 尚、`template/bas` 内に保存すると管理しやすい。
 
-4. `template/template.pptm`を開き、VBEを起動する。
+> [!TIP]
+> basファイルを保存する際は、Ctrl+Shift+Sからエンコードフォーマットを"ANSI"にしてあげると、メッセージボックスの日本語が文字化けせずに表示される。
+
+5. `template/template.pptm`を開き、VBEを起動する。
 その後、「プロジェクト」ウィンドウで右クリックし、メニューから「ファイルのインポート」を選択し、書き出した.basファイルを読み込む。
 
-5. `template/customUI/customUI.xml`を適宜編集する。
+6. `template/customUI/customUI.xml`を適宜編集する。
 以下は例。アイコンは[Office 365アイコン(imageMso)一覧(O)](https://www.ka-net.org/blog/?p=11361)や[ImageMSO List Reference](https://bert-toolkit.com/imagemso-list.html)を参照。
 ```customUI.xml
 <?xml version="1.0" encoding="utf-8"?>
