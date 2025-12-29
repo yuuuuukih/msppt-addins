@@ -47,8 +47,8 @@
         </group>
 
         <group id="SizeAndDistribute" label="SizeAndDistribute">
-          <button id="B-+" label="Increase" keytip="+" imageMso="OutlineExpand" size="large" onAction="IncreaseAndDistribute" />
-          <button id="B--" label="Decrease" keytip="-" imageMso="OutlineCollapse" size="large" onAction="DecreaseAndDistribute" />
+          <button id="B-SI" label="Increase" keytip="SI" imageMso="OutlineExpand" size="large" onAction="IncreaseAndDistribute" />
+          <button id="B-SD" label="Decrease" keytip="SD" imageMso="OutlineCollapse" size="large" onAction="DecreaseAndDistribute" />
         </group>
 
       </tab>
