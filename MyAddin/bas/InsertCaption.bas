@@ -13,25 +13,25 @@ Sub InsertCaption()
     Dim leftPosition As Single
     Dim topPosition As Single
     
-    ' cm‚ğƒ|ƒCƒ“ƒg‚É•ÏŠ·‚·‚é’è”
+    ' cmã‚’ãƒã‚¤ãƒ³ãƒˆã«å¤‰æ›ã™ã‚‹å®šæ•°
     cmToPoints = 28.3465
     
-    ' Œ»İ‚ÌƒAƒNƒeƒBƒuƒXƒ‰ƒCƒh‚ğæ“¾
+    ' ç¾åœ¨ã®ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ã‚¹ãƒ©ã‚¤ãƒ‰ã‚’å–å¾—
     Set slide = ActiveWindow.View.slide
     
-    ' ƒeƒLƒXƒg‚ÆF‚ğİ’è
+    ' ãƒ†ã‚­ã‚¹ãƒˆã¨è‰²ã‚’è¨­å®š
     captionText = "caption"
-    fontColor = RGB(89, 89, 89)
-    lineColor = RGB(89, 89, 89)
+    fontColor = RGB(0, 15, 120)
+    lineColor = RGB(0, 15, 120)
     
-    ' ü‚ğì¬
+    ' ç·šã‚’ä½œæˆ
     Set line = slide.Shapes.AddLine(BeginX:=0, BeginY:=0, EndX:=26.4 * cmToPoints, EndY:=0)
     With line.line
-        .Weight = 0.75
+        .Weight = 1.5
         .ForeColor.RGB = lineColor
     End With
     
-    ' ’·•ûŒ`‚ğì¬
+    ' é•·æ–¹å½¢ã‚’ä½œæˆ
     Set rect = slide.Shapes.AddShape(Type:=msoShapeRectangle, Left:=0, Top:=0, Width:=24.25 * cmToPoints, Height:=1 * cmToPoints)
     With rect
         .Fill.Transparency = 1
@@ -46,21 +46,21 @@ Sub InsertCaption()
         .textFrame.TextRange.ParagraphFormat.Alignment = ppAlignLeft
     End With
     
-    ' ü‚Æ’·•ûŒ`‚ğ‰º‘µ‚¦‚©‚Â¶‘µ‚¦‚Å‡‚í‚¹‚é
+    ' ç·šã¨é•·æ–¹å½¢ã‚’ä¸‹æƒãˆã‹ã¤å·¦æƒãˆã§åˆã‚ã›ã‚‹
     line.Top = rect.Top + rect.Height - line.Height
     line.Left = rect.Left
     
-    ' ü‚Æ’·•ûŒ`‚ğƒOƒ‹[ƒv‰»‚·‚é
+    ' ç·šã¨é•·æ–¹å½¢ã‚’ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã™ã‚‹
     Set groupItems = slide.Shapes.Range(Array(line.Name, rect.Name))
     Set groupShape = groupItems.Group
     
-    ' ƒOƒ‹[ƒv‰»‚µ‚½ƒIƒuƒWƒFƒNƒg‚ğw’è‚ÌˆÊ’u‚É”z’u‚·‚é
+    ' ã‚°ãƒ«ãƒ¼ãƒ—åŒ–ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã®ä½ç½®ã«é…ç½®ã™ã‚‹
     leftPosition = 0.56 * cmToPoints
     topPosition = 4.29 * cmToPoints
     groupShape.Left = leftPosition
     groupShape.Top = topPosition
     
-    ' ƒNƒŠ[ƒ“ƒAƒbƒv
+    ' ã‚¯ãƒªãƒ¼ãƒ³ã‚¢ãƒƒãƒ—
     Set line = Nothing
     Set rect = Nothing
     Set groupItems = Nothing
