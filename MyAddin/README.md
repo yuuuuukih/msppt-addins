@@ -55,7 +55,7 @@
 
 ## ShapeSettings
 - LockAspectRatio
-  - 選択したすべての図形のアスペクト比（縦横比）を固定する。
+  - 選択したオブジェクトのアスペクト比（縦横比）の固定をON/OFFする。固定されている場合は解除し、固定されていない場合は固定する。
 
 ## ShapeAdjustments
 - AlignRoundedCorners
