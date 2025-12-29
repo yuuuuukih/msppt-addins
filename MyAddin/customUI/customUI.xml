@@ -11,8 +11,8 @@
         </group>
 
         <group id="TextSettings" label="TextSettings">
-          <button id="B-T" label="WrapON/OFF" keytip="T" imageMso="WrapText" size="large" onAction="ToggleTextWrap" />
-          <button id="B-C" label="ClearTexts" keytip="C" imageMso="GroupChanges" size="large" onAction="ClearAllTexts" />
+          <button id="B-T" label="WrapON/OFF" keytip="T" imageMso="WrapText" size="normal" onAction="ToggleTextWrap" />
+          <button id="B-C" label="ClearTexts" keytip="C" imageMso="GroupChanges" size="normal" onAction="ClearAllTexts" />
         </group>
 
         <group id="MoveObjectsToAlign" label="MoveObjectsToAlign">
@@ -44,6 +44,11 @@
         <group id="ShapeAdjustments" label="ShapeAdjustments">
           <button id="B-AR" label="RoundedCorner" keytip="AR" imageMso="ShapeRoundedRectangle" size="normal" onAction="AlignRoundedCorners" />
           <button id="B-AA" label="ArrowAdjust" keytip="AA" imageMso="ShapeRightArrow" size="normal" onAction="AlignArrowAdjustments" />
+        </group>
+
+        <group id="SizeAndDistribute" label="SizeAndDistribute">
+          <button id="B->" label="Increase" keytip=">" imageMso="OutlineExpand" size="large" onAction="IncreaseAndDistribute" />
+          <button id="B-<" label="Decrease" keytip="<" imageMso="OutlineCollapse" size="large" onAction="DecreaseAndDistribute" />
         </group>
 
       </tab>
