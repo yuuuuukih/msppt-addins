@@ -10,8 +10,9 @@
           <button id="B-S" label="Sizes" keytip="S" imageMso="SizeToControlHeightAndWidth" size="large" onAction="AlignBlockSizes" />
         </group>
 
-        <group id="WrapText" label="WrapText">
-          <button id="B-T" label="ON/OFF" keytip="T" imageMso="WrapText" size="large" onAction="ToggleTextWrap" />
+        <group id="TextSettings" label="TextSettings">
+          <button id="B-T" label="WrapON/OFF" keytip="T" imageMso="WrapText" size="large" onAction="ToggleTextWrap" />
+          <button id="B-C" label="ClearTexts" keytip="C" imageMso="GroupChanges" size="large" onAction="ClearAllTexts" />
         </group>
 
         <group id="MoveObjectsToAlign" label="MoveObjectsToAlign">
@@ -34,6 +35,15 @@
         <group id="InsertTemplate" label="InsertTemplate">
           <button id="B-IC" label="Caption" keytip="IC" imageMso="ChartTitle" size="large" onAction="InsertCaption" />
           <button id="B-IS" label="Source" keytip="IS" imageMso="TextBoxInsertGallery" size="large" onAction="InsertSource" />
+        </group>
+
+        <group id="ShapeSettings" label="ShapeSettings">
+          <button id="B-L" label="LockAspect" keytip="L" imageMso="GroupPageLayoutSheetOptions" size="large" onAction="LockAspectRatio" />
+        </group>
+
+        <group id="ShapeAdjustments" label="ShapeAdjustments">
+          <button id="B-AR" label="RoundedCorner" keytip="AR" imageMso="ShapeRoundedRectangle" size="normal" onAction="AlignRoundedCorners" />
+          <button id="B-AA" label="ArrowAdjust" keytip="AA" imageMso="ShapeRightArrow" size="normal" onAction="AlignArrowAdjustments" />
         </group>
 
       </tab>
