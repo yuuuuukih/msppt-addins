@@ -1,25 +1,25 @@
 Attribute VB_Name = "LockAspectRatio"
-' Lock aspect ratio for selected shapes
+' Toggle aspect ratio lock for selected shapes
 
 Sub LockAspectRatio()
     Dim shp As Shape
-    Dim shapeCount As Integer
     
     ' 図形が選択されているか確認
     If ActiveWindow.Selection.Type <> ppSelectionShapes Then
-        MsgBox "図形が選択されていません。"
+        MsgBox "図形が選択されていません。", vbExclamation
         Exit Sub
     End If
     
-    ' 選択された図形の数を取得
-    shapeCount = ActiveWindow.Selection.ShapeRange.Count
-    
-    ' すべての選択図形のアスペクト比を固定
+    ' すべての選択図形のアスペクト比をトグル
     For Each shp In ActiveWindow.Selection.ShapeRange
-        shp.LockAspectRatio = msoTrue
+        If shp.LockAspectRatio = msoTrue Then
+            ' 固定されている場合は解除
+            shp.LockAspectRatio = msoFalse
+        Else
+            ' 固定されていない場合は固定
+            shp.LockAspectRatio = msoTrue
+        End If
     Next shp
-    
-    MsgBox shapeCount & " 個の図形のアスペクト比を固定しました。"
     
     ' クリーンアップ
     Set shp = Nothing
