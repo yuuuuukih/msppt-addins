@@ -36,11 +36,6 @@
           <button id="B-IS" label="Source" keytip="IS" imageMso="TextBoxInsertGallery" size="large" onAction="InsertSource" />
         </group>
 
-        <group id="CreateIncircle" label="CreateIncircle">
-          <button id="B-XT" label="ForTriangle" keytip="XT" imageMso="ShapeIsoscelesTriangle" size="normal" onAction="CreateIncircleForTriangle" />
-          <button id="B-XI" label="ForInvertedTriangle" keytip="XI" imageMso="MacroPlay" size="normal" onAction="CreateIncircleForInvertedTriangle" />
-        </group>
-
       </tab>
     </tabs>
   </ribbon>
